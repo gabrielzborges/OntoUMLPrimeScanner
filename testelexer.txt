@@ -1,0 +1,14 @@
+Kind Person {}
+
+Role Traveler {}
+
+Traveler specializes Person;
+
+Kind Vehicle {}
+Role TravellingVehicle {}
+TravellingVehicle => Vehicle;
+
+RelatorUniversal Travel {
+    mediates [1..1] Traveler [1..*];
+    mediates [1..1] TravellingVehicle [1..1];
+}
